@@ -51,7 +51,7 @@ public class SummaryCard : Card {
         super.init(webUrl: url, cardType: "summary")
     }
     
-    override class func deserializeFromData(data: NSDictionary) -> AnyObject? {
+    override public class func deserializeFromData(data: NSDictionary) -> AnyObject? {
         var summaryCard:SummaryCard?
         var startURL:NSURL?
         var title:String?

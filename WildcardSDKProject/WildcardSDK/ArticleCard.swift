@@ -86,7 +86,7 @@ public class ArticleCard : Card{
         super.init(webUrl: url, cardType: "article")
     }
     
-    override class func deserializeFromData(data: NSDictionary) -> AnyObject? {
+    override public class func deserializeFromData(data: NSDictionary) -> AnyObject? {
         var articleCard:ArticleCard?
         
         var startURL:NSURL?

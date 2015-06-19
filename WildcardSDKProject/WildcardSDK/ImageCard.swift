@@ -60,7 +60,7 @@ public class ImageCard : Card{
         super.init(webUrl: url, cardType: "image")
     }
     
-    override class func deserializeFromData(data: NSDictionary) -> AnyObject? {
+    override public class func deserializeFromData(data: NSDictionary) -> AnyObject? {
         
         var imageCard:ImageCard?
         

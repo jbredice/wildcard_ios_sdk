@@ -70,7 +70,7 @@ public class VideoCard : Card{
         super.init(webUrl: url, cardType: "video")
     }
     
-    override class func deserializeFromData(data: NSDictionary) -> AnyObject? {
+    override public class func deserializeFromData(data: NSDictionary) -> AnyObject? {
         
         var videoCard:VideoCard?
         

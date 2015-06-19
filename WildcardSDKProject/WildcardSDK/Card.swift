@@ -66,7 +66,7 @@ public class Card : NSObject, PlatformObject {
         }
     }
     
-    class func deserializeFromData(data: NSDictionary) -> AnyObject? {
+    public class func deserializeFromData(data: NSDictionary) -> AnyObject? {
         if let cardType = data["cardType"] as? String{
             switch(cardType){
             case "article":
