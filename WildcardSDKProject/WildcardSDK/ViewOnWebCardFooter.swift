@@ -43,15 +43,15 @@ public class ViewOnWebCardFooter: CardViewElement {
         hairline = addTopBorderWithWidth(0.5, color: UIColor.wildcardBackgroundGray())
         viewOnWebButton.addTarget(self, action: "viewOnWebButtonTapped", forControlEvents: .TouchUpInside)
         
-        shareButton = UIButton(frame: CGRectZero)
-        shareButton.tintColor = UIColor.wildcardLightBlue()
-        shareButton.setImage(UIImage.loadFrameworkImage("shareIcon"), forState: .Normal)
-        addSubview(shareButton)
-        rightConstraint = shareButton.constrainRightToSuperView(15)
-        
-        addConstraint(NSLayoutConstraint(item: shareButton, attribute: .CenterY, relatedBy: .Equal, toItem: viewOnWebButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
-        
-        shareButton.addTarget(self, action: "shareButtonTapped", forControlEvents: .TouchUpInside)
+//        shareButton = UIButton(frame: CGRectZero)
+//        shareButton.tintColor = UIColor.wildcardLightBlue()
+//        shareButton.setImage(UIImage.loadFrameworkImage("shareIcon"), forState: .Normal)
+//        addSubview(shareButton)
+//        rightConstraint = shareButton.constrainRightToSuperView(15)
+//        
+//        addConstraint(NSLayoutConstraint(item: shareButton, attribute: .CenterY, relatedBy: .Equal, toItem: viewOnWebButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
+//        
+//        shareButton.addTarget(self, action: "shareButtonTapped", forControlEvents: .TouchUpInside)
     }
     
     func shareButtonTapped(){

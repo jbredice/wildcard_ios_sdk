@@ -50,4 +50,25 @@ extension UIButton {
         
         return readMoreButton
     }
+    
+    class func defaultDigDeeperButton()->UIButton{
+        
+        var readMoreButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        readMoreButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackground"), forState: UIControlState.Normal)
+        readMoreButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackgroundTapped"), forState: UIControlState.Highlighted)
+        readMoreButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
+        let buttonTitle = NSMutableAttributedString(string: "DIG DEEPER")
+        buttonTitle.setFont(WildcardSDK.cardActionButtonFont)
+        buttonTitle.setColor(UIColor.wildcardLightBlue())
+        buttonTitle.setKerning(0.3)
+        
+        let highlightedTitle = NSMutableAttributedString(attributedString: buttonTitle)
+        highlightedTitle.setColor(UIColor.wildcardDarkBlue())
+        
+        readMoreButton.setAttributedTitle(buttonTitle, forState: .Normal)
+        readMoreButton.setAttributedTitle(highlightedTitle, forState: .Highlighted)
+        readMoreButton.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
+        
+        return readMoreButton
+    }
 }

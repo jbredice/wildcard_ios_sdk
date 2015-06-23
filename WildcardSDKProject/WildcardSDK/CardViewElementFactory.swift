@@ -39,6 +39,8 @@ public class CardViewElementFactory{
             cardViewElement = ReadMoreFooter(frame:CGRectZero);
         case .ViewOnWebFooter:
             cardViewElement = ViewOnWebCardFooter(frame:CGRectZero);
+        case .DigDeeperFooter:
+            cardViewElement = DigDeeperFooter(frame:CGRectZero);
         case .SimpleParagraph:
             cardViewElement = SingleParagraphCardBody(frame:CGRectZero);
         case .VideoBody:

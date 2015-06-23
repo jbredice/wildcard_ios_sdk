@@ -157,6 +157,7 @@
 		1DF760E91ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF760E81ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift */; };
 		1DF760EB1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF760EA1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift */; };
 		1DFFEDD51A40086D008E65BC /* CardViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFEDD41A40086D008E65BC /* CardViewElement.swift */; };
+		EF12E2561B3A00D0007BC3C4 /* DigDeeperCardFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E2551B3A00D0007BC3C4 /* DigDeeperCardFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,7 @@
 		1DF760E81ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockImageViewAnimationController.swift; sourceTree = "<group>"; };
 		1DF760EA1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockImageViewPresentationController.swift; sourceTree = "<group>"; };
 		1DFFEDD41A40086D008E65BC /* CardViewElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewElement.swift; sourceTree = "<group>"; };
+		EF12E2551B3A00D0007BC3C4 /* DigDeeperCardFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigDeeperCardFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,6 +628,7 @@
 		1DC928831A40994E0040DAD0 /* Footers */ = {
 			isa = PBXGroup;
 			children = (
+				EF12E2551B3A00D0007BC3C4 /* DigDeeperCardFooter.swift */,
 				1D3ECFC61A40FB260001BF7A /* ReadMoreCardFooter.swift */,
 				1DC928771A40861B0040DAD0 /* ViewOnWebCardFooter.swift */,
 			);
@@ -986,6 +989,7 @@
 				1D904F9D1A2FE0D2001FFDEA /* ArticleCard.swift in Sources */,
 				1DAC268E1A3564170005C4BE /* CheckShortTitleEdge.swift in Sources */,
 				1D9194841AE9852000355015 /* SummaryCardTwitterTweetVisualSource.swift in Sources */,
+				EF12E2561B3A00D0007BC3C4 /* DigDeeperCardFooter.swift in Sources */,
 				1DC39A6C1A7B3FFD007BBEBE /* UILabelExtensions.swift in Sources */,
 				1DAC268A1A355BB70005C4BE /* CardTypeEdge.swift in Sources */,
 				1D9764841A4356B200E51FE5 /* MaximizedArticleVisualSource.swift in Sources */,
