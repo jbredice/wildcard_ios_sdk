@@ -8,10 +8,11 @@
 
 import Foundation
 
-class CardViewVisualSourceFactory {
+@objc
+public class CardViewVisualSourceFactory {
     
     /// Returns a stock visual source from a given card layout.
-    class func visualSourceFromLayout(layout:WCCardLayout, card:Card)->CardViewVisualSource{
+    public class func visualSourceFromLayout(layout:WCCardLayout, card:Card)->CardViewVisualSource{
         switch(layout){
         case .SummaryCardNoImage:
             var source = SummaryCardNoImageVisualSource(card:card)

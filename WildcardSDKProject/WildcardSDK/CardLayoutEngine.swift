@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@objc
 public class CardLayoutEngine{
     
     var root:LayoutDecisionNode
