@@ -11,8 +11,8 @@ import Foundation
 @objc
 public class ViewOnWebCardFooter: CardViewElement {
     
-    public var viewOnWebButton:UIButton!
-    public var shareButton:UIButton!
+    public var readMoreButton:UIButton!
+    public var saveButton:UIButton!
     public var hairline:UIView!
     
     public var contentEdgeInset:UIEdgeInsets{
@@ -34,37 +34,36 @@ public class ViewOnWebCardFooter: CardViewElement {
     private var rightConstraint:NSLayoutConstraint!
     
     override public func initialize() {
-        viewOnWebButton = UIButton.defaultViewOnWebButton()
-        addSubview(viewOnWebButton!)
-        leftConstraint = viewOnWebButton?.constrainLeftToSuperView(15)
-        topConstraint = viewOnWebButton?.constrainTopToSuperView(10)
-        bottomConstraint = viewOnWebButton?.constrainBottomToSuperView(10)
+        readMoreButton = UIButton.defaultReadMoreButton()
+        addSubview(readMoreButton!)
+        
+        leftConstraint = readMoreButton?.constrainLeftToSuperView(15)
+        topConstraint = readMoreButton?.constrainTopToSuperView(10)
+        bottomConstraint = readMoreButton?.constrainBottomToSuperView(10)
         
         hairline = addTopBorderWithWidth(0.5, color: UIColor.wildcardBackgroundGray())
-        viewOnWebButton.addTarget(self, action: "viewOnWebButtonTapped", forControlEvents: .TouchUpInside)
         
-        shareButton = UIButton(frame: CGRectZero)
-        shareButton.tintColor = UIColor.wildcardLightBlue()
-        shareButton.setImage(UIImage.loadFrameworkImage("shareIcon"), forState: .Normal)
-        addSubview(shareButton)
-        rightConstraint = shareButton.constrainRightToSuperView(15)
+        readMoreButton.addTarget(self, action: "readMoreButtonTapped", forControlEvents: .TouchUpInside)
         
-        addConstraint(NSLayoutConstraint(item: shareButton, attribute: .CenterY, relatedBy: .Equal, toItem: viewOnWebButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        saveButton = UIButton.defaultSaveButton()
+        addSubview(saveButton!)
+        rightConstraint = saveButton?.constrainRightToSuperView(15)
         
-        shareButton.addTarget(self, action: "shareButtonTapped", forControlEvents: .TouchUpInside)
+        saveButton.addTarget(self, action: "saveButtonTapped", forControlEvents: .TouchUpInside)
+        
+        addConstraint(NSLayoutConstraint(item: saveButton, attribute: .CenterY, relatedBy: .Equal, toItem: readMoreButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
     }
     
-    func shareButtonTapped(){
-        if(cardView != nil){
-            WildcardSDK.analytics?.trackEvent("CardEngaged", withProperties: ["cta":"shareAction"], withCard: cardView!.backingCard)
-            cardView!.handleShare()
-        }
-    }
-    
-    func viewOnWebButtonTapped(){
+    func readMoreButtonTapped(){
         if(cardView != nil){
             WildcardSDK.analytics?.trackEvent("CardEngaged", withProperties: ["cta":"viewOnWeb"], withCard: cardView!.backingCard)
             cardView!.handleViewOnWeb(cardView!.backingCard.webUrl)
+        }
+    }
+    
+    func saveButtonTapped(){
+        if(cardView != nil){
+            cardView!.delegate?.cardViewRequestedAction?(cardView!, action: CardViewAction(type: .Custom, parameters: nil))
         }
     }
     
@@ -74,7 +73,7 @@ public class ViewOnWebCardFooter: CardViewElement {
     override public func optimizedHeight(cardWidth:CGFloat)->CGFloat{
         var height:CGFloat = 0
         height += topConstraint.constant
-        height += viewOnWebButton.intrinsicContentSize().height
+        height += readMoreButton.intrinsicContentSize().height
         height += bottomConstraint.constant
         return round(height)
     }

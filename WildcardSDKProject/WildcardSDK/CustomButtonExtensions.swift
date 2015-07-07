@@ -50,4 +50,25 @@ extension UIButton {
         
         return readMoreButton
     }
+    
+    class func defaultSaveButton()->UIButton{
+        
+        var saveButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        saveButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackground"), forState: UIControlState.Normal)
+        saveButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackgroundTapped"), forState: UIControlState.Highlighted)
+        saveButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
+        let buttonTitle = NSMutableAttributedString(string: "SAVE")
+        buttonTitle.setFont(WildcardSDK.cardActionButtonFont)
+        buttonTitle.setColor(UIColor.wildcardLightBlue())
+        buttonTitle.setKerning(0.3)
+        
+        let highlightedTitle = NSMutableAttributedString(attributedString: buttonTitle)
+        highlightedTitle.setColor(UIColor.wildcardDarkBlue())
+        
+        saveButton.setAttributedTitle(buttonTitle, forState: .Normal)
+        saveButton.setAttributedTitle(highlightedTitle, forState: .Highlighted)
+        saveButton.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
+        
+        return saveButton
+    }
 }
