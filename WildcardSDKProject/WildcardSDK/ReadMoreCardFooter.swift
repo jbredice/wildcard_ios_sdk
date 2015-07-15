@@ -12,16 +12,17 @@ import Foundation
 public class ReadMoreFooter: CardViewElement {
     
     public var readMoreButton:UIButton!
-    public var saveButton:UIButton!
+//    public var saveButton:UIButton!
     
     public var contentEdgeInset:UIEdgeInsets{
         get{
-            return UIEdgeInsetsMake(topConstraint.constant, leftConstraint.constant, bottomConstraint.constant, rightConstraint.constant)
+//            return UIEdgeInsetsMake(topConstraint.constant, leftConstraint.constant, bottomConstraint.constant, rightConstraint.constant)
+            return UIEdgeInsetsMake(topConstraint.constant, leftConstraint.constant, bottomConstraint.constant, 0.0);
         }
         set{
             topConstraint.constant = newValue.top
             leftConstraint.constant = newValue.left
-            rightConstraint.constant = newValue.right
+//            rightConstraint.constant = newValue.right
             bottomConstraint.constant = newValue.bottom
         }
     }
@@ -30,7 +31,7 @@ public class ReadMoreFooter: CardViewElement {
     private var topConstraint:NSLayoutConstraint!
     private var bottomConstraint:NSLayoutConstraint!
     private var leftConstraint:NSLayoutConstraint!
-    private var rightConstraint:NSLayoutConstraint!
+//    private var rightConstraint:NSLayoutConstraint!
     
     override public func initialize() {
         readMoreButton = UIButton.defaultReadMoreButton()
@@ -42,13 +43,13 @@ public class ReadMoreFooter: CardViewElement {
         
         readMoreButton.addTarget(self, action: "readMoreButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         
-        saveButton = UIButton.defaultSaveButton()
-        addSubview(saveButton!)
-        rightConstraint = saveButton?.constrainRightToSuperView(15)
-        
-        saveButton.addTarget(self, action: "saveButtonTapped", forControlEvents: .TouchUpInside)
-        
-        addConstraint(NSLayoutConstraint(item: saveButton, attribute: .CenterY, relatedBy: .Equal, toItem: readMoreButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
+//        saveButton = UIButton.defaultSaveButton()
+//        addSubview(saveButton!)
+//        rightConstraint = saveButton?.constrainRightToSuperView(15)
+//        
+//        saveButton.addTarget(self, action: "saveButtonTapped", forControlEvents: .TouchUpInside)
+//        
+//        addConstraint(NSLayoutConstraint(item: saveButton, attribute: .CenterY, relatedBy: .Equal, toItem: readMoreButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
     }
     
     override public func optimizedHeight(cardWidth:CGFloat)->CGFloat{
@@ -69,9 +70,9 @@ public class ReadMoreFooter: CardViewElement {
         }
     }
     
-    func saveButtonTapped(){
-        if(cardView != nil){
-            cardView!.delegate?.cardViewRequestedAction?(cardView!, action: CardViewAction(type: .Custom, parameters: nil))
-        }
-    }
+//    func saveButtonTapped(){
+//        if(cardView != nil){
+//            cardView!.delegate?.cardViewRequestedAction?(cardView!, action: CardViewAction(type: .Custom, parameters: nil))
+//        }
+//    }
 }

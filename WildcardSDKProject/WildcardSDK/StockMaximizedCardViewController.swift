@@ -42,7 +42,7 @@ class StockMaximizedCardViewController: UIViewController, CardPhysicsDelegate, C
         super.viewDidLoad()
         
         maximizedCardView = CardView.createCardView(maximizedCard, visualSource: maximizedCardVisualSource, preferredWidth:UIViewNoIntrinsicMetric)
-        maximizedCardView.delegate = self
+        maximizedCardView.delegate = presentingCardView.delegate;
         
         view.addSubview(maximizedCardView!)
         
