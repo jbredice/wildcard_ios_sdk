@@ -9,7 +9,7 @@
 import Foundation
 
 /// Global convenience settings
-@objc
+
 public class WildcardSDK {
  
     /// Custom font for Card titles
@@ -135,7 +135,7 @@ public class WildcardSDK {
             WildcardSDK.sharedInstance.__applicationKey = key
             WildcardSDK.sharedInstance.__analytics = WCAnalytics(key:key)
         }else{
-            println("Wildcard SDK can only be initialized once.")
+            print("Wildcard SDK can only be initialized once.")
         }
     }
     

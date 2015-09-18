@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc
+
 public class ArticleCardTallVisualSource : BaseVisualSource, CardViewVisualSource {
     
     var header:FullCardHeader!

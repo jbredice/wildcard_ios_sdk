@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc
+
 public class SummaryCardTwitterTweetVisualSource : BaseVisualSource, CardViewVisualSource
 {
     var header:TwitterHeader!

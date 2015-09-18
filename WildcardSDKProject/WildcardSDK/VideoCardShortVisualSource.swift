@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc
+
 public class VideoCardShortImageSource : BaseVisualSource, CardViewVisualSource{
     
     var header:FullCardHeader!

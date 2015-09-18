@@ -9,7 +9,7 @@
 import Foundation
 
 @objc
-public class MaximizedArticleVisualSource : MaximizedCardViewVisualSource {
+public class MaximizedArticleVisualSource : NSObject, MaximizedCardViewVisualSource {
     
     var card:Card
     var body:MediaTextFullWebView!

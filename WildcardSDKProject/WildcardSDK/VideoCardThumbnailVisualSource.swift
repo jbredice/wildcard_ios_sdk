@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc
+
 public class VideoCardThumbnailImageSource : BaseVisualSource, CardViewVisualSource{
     
     var body:VideoCardThumbnail!

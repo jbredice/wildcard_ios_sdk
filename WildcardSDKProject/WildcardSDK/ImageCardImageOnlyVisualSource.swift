@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc
+
 public class ImageCardImageOnlyVisualSource : BaseVisualSource, CardViewVisualSource
 {
     var body:ImageOnlyBody!

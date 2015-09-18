@@ -19,7 +19,7 @@ class StockModalCardAnimationController: NSObject,UIViewControllerAnimatedTransi
     }
    
     // MARK: UIViewControllerAnimatedTransitioning
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     
@@ -37,7 +37,7 @@ class StockModalCardAnimationController: NSObject,UIViewControllerAnimatedTransi
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         let containerView = transitionContext.containerView()
         
-        containerView.addSubview(presentedControllerView)
+        containerView!.addSubview(presentedControllerView)
         
         if let stockModalController = presentedController as? StockModalCardViewController{
             // pop up the card
@@ -57,7 +57,7 @@ class StockModalCardAnimationController: NSObject,UIViewControllerAnimatedTransi
     func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
         let presentedController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-        let containerView = transitionContext.containerView()
+//        let containerView = transitionContext.containerView()
         
         
         if let stockModalController = presentedController as? StockModalCardViewController{

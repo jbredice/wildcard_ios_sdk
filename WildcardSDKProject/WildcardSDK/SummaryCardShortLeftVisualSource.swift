@@ -9,7 +9,7 @@
 import Foundation
 
 
-@objc
+
 public class SummaryCardShortLeftVisualSource : BaseVisualSource, CardViewVisualSource
 {
     var header:FullCardHeader!
