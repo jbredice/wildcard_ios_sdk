@@ -10,7 +10,8 @@ import Foundation
 
 /// Global convenience settings
 
-public class WildcardSDK {
+@objc
+public class WildcardSDK : NSObject {
  
     /// Custom font for Card titles
     public class var cardTitleFont:UIFont{
