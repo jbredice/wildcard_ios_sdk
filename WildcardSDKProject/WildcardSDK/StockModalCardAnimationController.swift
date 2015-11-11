@@ -33,19 +33,24 @@ class StockModalCardAnimationController: NSObject, UIViewControllerAnimatedTrans
     
     // MARK: Private
     func animatePresentationWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        if let presentedView = transitionContext.viewForKey(UITransitionContextToViewKey) {
-            let center = presentedView.center
-            presentedView.center = CGPointMake(center.x, -presentedView.bounds.size.height)
-            transitionContext.containerView()!.addSubview(presentedView)
-            
-            UIView.animateWithDuration(self.transitionDuration(transitionContext),
-                delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseOut,
-                animations: {
-                    presentedView.center = center
-                }, completion: {
-                    (completed: Bool) -> Void in
-                    transitionContext.completeTransition(completed)
-            })
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        let containerView = transitionContext.containerView()
+        
+        containerView!.addSubview(presentedControllerView)
+        
+        if let stockModalController = presentedController as? StockModalCardViewController{
+            // pop up the card
+            stockModalController.cardViewVerticalConstraint.constant = stockModalController.view.frame.size.height
+            stockModalController.view.layoutIfNeeded()
+            if(stockModalController.cardView != nil){
+                UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                    stockModalController.cardViewVerticalConstraint!.constant = 0
+                    stockModalController.view.layoutIfNeeded()
+                    }, completion: {(completed: Bool) -> Void in
+                        transitionContext.completeTransition(completed)
+                })
+            }
         }
     }
     

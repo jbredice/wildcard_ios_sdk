@@ -8,8 +8,8 @@
 
 import Foundation
 
-
-public class MaximizedArticleVisualSource : MaximizedCardViewVisualSource {
+@objc
+public class MaximizedArticleVisualSource : NSObject, MaximizedCardViewVisualSource {
     
     var card:Card
     var body:MediaTextFullWebView!

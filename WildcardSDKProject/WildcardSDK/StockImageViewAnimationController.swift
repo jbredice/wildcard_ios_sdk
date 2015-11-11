@@ -82,6 +82,7 @@ class StockImageViewAnimationController: NSObject,UIViewControllerAnimatedTransi
     
     func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
         let presentedController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+//        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let containerView = transitionContext.containerView()
         let stockImageController = presentedController as! StockImageViewViewController
         

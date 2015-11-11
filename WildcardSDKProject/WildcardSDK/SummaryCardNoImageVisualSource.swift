@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public class SummaryCardNoImageVisualSource : BaseVisualSource, CardViewVisualSource{
     
     var header:FullCardHeader!
