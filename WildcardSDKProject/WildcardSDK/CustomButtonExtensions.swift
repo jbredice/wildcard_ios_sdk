@@ -53,7 +53,7 @@ extension UIButton {
     
     class func defaultSaveButton()->UIButton{
         
-        var saveButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        let saveButton = UIButton(type:UIButtonType.Custom)
         saveButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackground"), forState: UIControlState.Normal)
         saveButton.setBackgroundImage(UIImage.loadFrameworkImage("borderedButtonBackgroundTapped"), forState: UIControlState.Highlighted)
         saveButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center

@@ -9,7 +9,7 @@
 import Foundation
 
 @objc
-public class CardViewVisualSourceFactory {
+public class CardViewVisualSourceFactory : NSObject {
     
     /// Returns a stock visual source from a given card layout.
     public class func visualSourceFromLayout(layout:WCCardLayout, card:Card)->CardViewVisualSource{
