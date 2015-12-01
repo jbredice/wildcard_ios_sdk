@@ -157,6 +157,7 @@
 		1DF760E91ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF760E81ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift */; };
 		1DF760EB1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF760EA1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift */; };
 		1DFFEDD51A40086D008E65BC /* CardViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFEDD41A40086D008E65BC /* CardViewElement.swift */; };
+		EF8A43D71C0E1465005EC033 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8A43D61C0E1465005EC033 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,7 @@
 		1DF760E81ACC3F0F0098F6E8 /* StockImageViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockImageViewAnimationController.swift; sourceTree = "<group>"; };
 		1DF760EA1ACC3F1B0098F6E8 /* StockImageViewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockImageViewPresentationController.swift; sourceTree = "<group>"; };
 		1DFFEDD41A40086D008E65BC /* CardViewElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewElement.swift; sourceTree = "<group>"; };
+		EF8A43D61C0E1465005EC033 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8A43D71C0E1465005EC033 /* AVFoundation.framework in Frameworks */,
 				1DAC26ED1A3657860005C4BE /* UIKit.framework in Frameworks */,
 				1DAC269A1A36383F0005C4BE /* QuartzCore.framework in Frameworks */,
 			);
@@ -393,6 +396,7 @@
 		1D3A28501A2E695D00A9D4C1 = {
 			isa = PBXGroup;
 			children = (
+				EF8A43D61C0E1465005EC033 /* AVFoundation.framework */,
 				1DAC26EC1A3657860005C4BE /* UIKit.framework */,
 				1DAC26991A36383F0005C4BE /* QuartzCore.framework */,
 				1D3A28841A2E697700A9D4C1 /* WildcardSDK */,
